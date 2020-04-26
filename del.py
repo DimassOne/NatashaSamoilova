@@ -1,9 +1,2 @@
-word = 'Good morning, Good afternoon, Good evening'
-ignore = ['morning','after','od']
-number = word.find('morning')
-
-for num in ignore:
-    if word.find(num):
-        print('Да строка входит')
-    else:
-        print ('Строки нет...')
+d = {i: i+1 for i in range(10)}
+print(d)
