@@ -9,8 +9,8 @@ word2 = word.replace('Network','/24')
 
 mass = ['255','255','255','0']
 addr = (ip.split('/')[0]).split('.')
-addr.pop().append('1')
-#addr.append('1')
+addr.pop()
+addr.append('1')
 
 print(addr)
 l = [int(i) for i in addr]

@@ -1,4 +1,4 @@
-ip = input("Введите ip адрес в формате: 10.1.1.0/24 ")
+from sys import argv
 
 word = """
 Network:
@@ -8,9 +8,9 @@ Network:
 word2 = word.replace('Network','/24')
 
 mass = ['255','255','255','0']
-addr = (ip.split('/')[0]).split('.')
-addr.pop().append('1')
-#addr.append('1')
+addr = (('.'.join(argv[1:])).split('/')[0]).split('.')
+addr.pop()
+addr.append('1')
 
 print(addr)
 l = [int(i) for i in addr]
